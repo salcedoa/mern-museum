@@ -12,7 +12,7 @@ import NoPage from './pages/NoPage';
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
+      <Routes> 
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="events" element={<Events />} />
