@@ -7,7 +7,9 @@ import Events from './pages/Events';
 import Collection from './pages/Collection';
 import Shop from './pages/Shop';
 import Support from './pages/Support';
+import Book from './pages/Book';
 import NoPage from './pages/NoPage';
+import './App.scss';
 
 export default function App() {
   return (
@@ -19,6 +21,7 @@ export default function App() {
           <Route path="collection" element={<Collection />} />
           <Route path="shop" element={<Shop />} />
           <Route path="support" element={<Support />} />
+          <Route path="book" element={<Book />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

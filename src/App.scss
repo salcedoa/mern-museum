@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+$highlight: rgb(204, 52, 191);
+$background: rgb(38, 38, 38);
+$text: rgb(212, 212, 212);
+
+body {
+  background-color: $background;
+  color: $text;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: $highlight;
+
+  :visited {
+    color: initial;
+  }
+}
+
+nav {
+  background-color: black;
+  margin: 0;
+  padding: 0rem;
+  height: 6rem;
+
+  #logo {
+    height: 100%;
+  }
+
+  ul {
+    list-style: none;
+    display: none;
+  }
+
+  li {
+    display: inline-block;
+    padding: 0 1rem;
+  }
+}
+
+footer {
+  height: 6rem;
+  background-color: black;
+  padding: 1rem;
+  text-align: center;
+}
+
+.link-button {
+  padding: 0.6rem;
+  border: solid 2px $highlight;
+  border-radius: 0.5rem;
+  display: inline-block;
+  margin: 1rem 0;
+}
+
+.text-block {
+  margin: 2rem 1rem;
+}
+
+#hero-home {
+  background-image: url('./assets/louvre-visite-privee-20.jpg');
+  background-size: contain;
+  background-attachment: fixed;
+  height: 40vh;
+}
+
+#general-info {
+  #timetable {
+    display: block;
+    padding: 0.3rem 0 1rem 1rem;
+    background-color: black;
+
+    table {
+      border-spacing: 1rem 0;
+    }
+  }
+
+  #status {
+    vertical-align: top;
+    border-bottom: dotted 10px $text;
+    padding-bottom: 1rem;
+
+    h2 {
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+      margin: 0;
+      text-align: left;
+    }
+  }
+}
