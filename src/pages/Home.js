@@ -6,7 +6,8 @@ const timeMap = new Map([
 	[3, "Closed"],
 	[4, "10:00 - 15:00"],
 	[5, "10:00 - 17:00"],
-	[6, "11:00 - 17:00"]
+	[6, "10:00 - 17:00"],
+	[0, "11:00 - 15:00"]
 ]);
 
 // check if museum is currently open
@@ -54,27 +55,27 @@ const OpeningTimes = () => {
 				</tr>
 				<tr>
 					<td>Tue</td>
-					<td>{timeMap.get(1)}</td>
+					<td>{timeMap.get(2)}</td>
 				</tr>
 				<tr>
 					<td>Wed</td>
-					<td>{timeMap.get(1)}</td>
+					<td>{timeMap.get(3)}</td>
 				</tr>
 				<tr>
 					<td>Thu</td>
-					<td>{timeMap.get(1)}</td>
+					<td>{timeMap.get(4)}</td>
 				</tr>
 				<tr>
 					<td>Fri</td>
-					<td>{timeMap.get(1)}</td>
+					<td>{timeMap.get(5)}</td>
 				</tr>
 				<tr>
 					<td>Sat</td>
-					<td>{timeMap.get(1)}</td>
+					<td>{timeMap.get(6)}</td>
 				</tr>
 				<tr>
 					<td>Sun</td>
-					<td>{timeMap.get(1)}</td>
+					<td>{timeMap.get(0)}</td>
 				</tr>
 			</tbody>
 		</table>
@@ -95,7 +96,7 @@ const OpenStatus = () => {
 					:
 					<>
 						<h2 style={{color: "#ab1515"}} >Currently Closed</h2>
-						<p>See our opening times and check our events and exhibitions page.</p>
+						<p>See our opening times below and check our events and exhibitions page.</p>
 					</>
 				}
 				<Link className="link-button" to="book">Book Tickets</Link>
