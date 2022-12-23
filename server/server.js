@@ -8,6 +8,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', function(req, res){
+  res.send("home");
+});
+
+const eventRoutes = require("./routes/events");
+app.use("/events", eventRoutes);
+
 app.listen(port, () => {
   // perform db connection when server starts
   dbo.connect()
