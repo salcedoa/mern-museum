@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom";
+import EventList from '../components/EventList';
 
 const timeMap = new Map([
 	[1, "10:00 - 17:00"],
@@ -104,6 +105,15 @@ const OpenStatus = () => {
 	);
 }
 
+const WhatsOn = () => {
+	return (
+		<div id="events-section">
+			<h1>Events and Exhibitions</h1>
+			<EventList />
+		</div>
+	);
+}
+
 const Home = () => {
 	return (
 		<>
@@ -112,6 +122,7 @@ const Home = () => {
 				<Welcome />
 				<OpenStatus />
 			</div>
+			<WhatsOn />
 		</>
 	);
 };

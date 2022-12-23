@@ -96,3 +96,22 @@ footer {
     }
   }
 }
+
+.eventBox {
+  padding: 1em;
+  background-color: black;
+  margin-bottom: 1em;
+  
+  img {
+    width: 100%;
+    padding: 0;
+  }
+  
+  * {
+    margin: 3px 0;
+  }
+}
+
+#events-section {
+  padding: 0 1em;
+}
