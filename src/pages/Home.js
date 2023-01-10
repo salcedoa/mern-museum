@@ -16,7 +16,7 @@ let open = false;
 const D = new Date();
 let hour = D.getHours();
 let day = D.getDay();
-const inOpeningRange = (o,c) => {return hour >= o && hour <= c}
+const inOpeningRange = (o,c) => {return hour >= o && hour < c}
 if (day === 1 && inOpeningRange(10,17)) {
 	open = true;
 } else if (day === 2 && inOpeningRange(10,17)) {
