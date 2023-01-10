@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import picture from '../assets/Burdur_Museum_3224.jpg';
 
 // component of a specific event box
 const Event = (props) => {
@@ -12,12 +11,14 @@ const Event = (props) => {
   }
 
   return (
-  <div className="eventBox">
-    <h2>{props.event.title}</h2>
-    <img src={picture} />
-    <h4>{props.event.preview}</h4>
-    <p>{convertDate(props.event.start_date)} - {convertDate(props.event.end_date)}</p>
-  </div>
+  <Link to={`/events/${props.event._id}`}>
+    <div className="eventBox">
+      <h2>{props.event.title}</h2>
+      <img src={props.event.img_url} alt="event thumbnail" />
+      <h4>{props.event.preview}</h4>
+      <p>{convertDate(props.event.start_date)} - {convertDate(props.event.end_date)}</p>
+    </div>
+  </Link>
 )};
 
 // returns a list of event components

@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './pages/Layout';
 import Home from './pages/Home';
 import Events from './pages/Events';
+import EventPage from './components/EventPage';
 import Collection from './pages/Collection';
 import Shop from './pages/Shop';
 import Support from './pages/Support';
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="events" element={<Events />} />
+          <Route path="events/:id" element={<EventPage />}></Route>
           <Route path="collection" element={<Collection />} />
           <Route path="shop" element={<Shop />} />
           <Route path="support" element={<Support />} />

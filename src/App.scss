@@ -101,10 +101,15 @@ footer {
   padding: 1em;
   background-color: black;
   margin-bottom: 1em;
+  color: $text;
   
+  h4 {line-height: initial;}
+
   img {
     width: 100%;
+    height: 21em;
     padding: 0;
+    object-fit: cover;
   }
   
   * {
@@ -114,4 +119,8 @@ footer {
 
 #events-section {
   padding: 0 1em;
+}
+
+.event-page {
+  padding: 1em;
 }
