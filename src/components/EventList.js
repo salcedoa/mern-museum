@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import calender from "../assets/calender.png";
 
 // component of a specific event box
 const Event = (props) => {
@@ -13,10 +14,12 @@ const Event = (props) => {
   return (
   <Link to={`/events/${props.event._id}`}>
     <div className="eventBox">
-      <h2>{props.event.title}</h2>
-      <img src={props.event.img_url} alt="event thumbnail" />
-      <h4>{props.event.preview}</h4>
-      <p>{convertDate(props.event.start_date)} - {convertDate(props.event.end_date)}</p>
+      <img src={props.event.img_url} alt="event thumbnail" className="eventThumbnail" />
+      <div className="eventBoxInfo">
+        <p><span><img src={calender} /></span>{convertDate(props.event.start_date)} - {convertDate(props.event.end_date)}</p>
+        <h2>{props.event.title}</h2>
+        <h4>{props.event.preview}</h4>
+      </div>
     </div>
   </Link>
 )};
