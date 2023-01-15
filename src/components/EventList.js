@@ -1,22 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import calender from "../assets/calender.png";
+import { convertDate } from "../components/helpers";
 
 // component of a specific event box
 const Event = (props) => {
-  
-  // converts date from UTC date time to custom format
-  const convertDate = (date) => {
-    let rawDate = new Date(date);
-    return`${rawDate.getDate()} ${rawDate.toLocaleString('default', { month: 'short' })} ${rawDate.getFullYear()}`;
-  }
-
   return (
   <Link to={`/events/${props.event._id}`}>
     <div className="eventBox">
       <img src={props.event.img_url} alt="event thumbnail" className="eventThumbnail" />
       <div className="eventBoxInfo">
-        <p><span><img src={calender} /></span>{convertDate(props.event.start_date)} - {convertDate(props.event.end_date)}</p>
+        <p><span><img src={calender} alt="calender icon" /></span>{convertDate(props.event.start_date)} - {convertDate(props.event.end_date)}</p>
         <h2>{props.event.title}</h2>
         <h4>{props.event.preview}</h4>
       </div>

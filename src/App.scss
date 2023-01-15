@@ -139,4 +139,34 @@ footer {
 
 .event-page {
   padding: 1em;
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    li {
+      float: left;
+    }
+    
+    li a {
+      display: block;
+      text-align: center;
+      padding: 9px;
+      text-decoration: none;
+    }
+  }
+
+  h3 { margin-bottom: 0; }
+
+  .eventThumbnail {
+    width: 100%;
+    height: 22em;
+    object-fit: cover;
+  }
+
+  span {display:inline-block; margin-right: 2px;}
+  img {width: 1.3em; vertical-align: text-bottom;}
+  .social-media-link {width: 2em;}
 }
