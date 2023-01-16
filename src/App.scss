@@ -4,6 +4,8 @@ $highlight: rgb(204, 52, 191);
 $background: rgb(38, 38, 38);
 $text: rgb(212, 212, 212);
 
+* {box-sizing: border-box;}
+
 body {
   background-color: $background;
   color: $text;
@@ -135,6 +137,11 @@ footer {
 
 #events-section {
   padding: 0 1.5em;
+
+  .link-button {
+    display: block;
+    text-align: center;
+  }
 }
 
 .event-page {
@@ -169,4 +176,50 @@ footer {
   span {display:inline-block; margin-right: 2px;}
   img {width: 1.3em; vertical-align: text-bottom;}
   .social-media-link {width: 2em;}
+}
+
+.support-prompt-wrapper {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.547),rgba(0, 0, 0, 0.5)), url("../src/assets/Burdur_Museum_3224.jpg");
+  background-repeat: no-repeat;
+  height: 30vh;
+  text-align: center;
+  
+  .support-prompt-text {
+    padding: 1em;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    border-width: 5px;
+    margin-bottom: 1em;
+    border-color: #8b6e6e;
+    border-style: solid;
+    padding: 0.45rem;
+    color: rgb(41, 40, 40);
+    background-color: #FAFAFC;
+    outline: none;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+  }
+
+  button {
+    display: block;
+    width: 8em;
+    padding: .3em;
+    border-style: none;
+    margin: 0 auto;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    color: $text;
+    background-color: black;
+    font-size: larger;
+  }
+
+  a {
+    text-decoration: underline;
+    color: $text;
+    &:hover {color: $highlight;}
+  }
 }

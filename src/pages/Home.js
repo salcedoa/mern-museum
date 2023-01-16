@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import EventList from '../components/EventList';
+import SupportPrompt from "../components/SupportPrompt";
 
 const timeMap = new Map([
 	[1, "10:00 - 17:00"],
@@ -109,7 +110,8 @@ const WhatsOn = () => {
 	return (
 		<div id="events-section">
 			<h1>Events and Exhibitions</h1>
-			<EventList />
+			<EventList full={false} />
+			<Link className="link-button" to="events" style={{align: 'center'}}>See more</Link>
 		</div>
 	);
 }
@@ -123,6 +125,7 @@ const Home = () => {
 				<OpenStatus />
 			</div>
 			<WhatsOn />
+			<SupportPrompt />
 		</>
 	);
 };

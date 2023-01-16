@@ -19,7 +19,7 @@ const Event = (props) => {
 )};
 
 // returns a list of event components
-export default function EventList() {
+export default function EventList(props) {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
@@ -38,7 +38,8 @@ export default function EventList() {
   }, [events.length]);
 
   function eventList() {
-    return events.map((event) => {
+    // if prop full is set to false, it will only return the first 2 events
+    return (props.full ? events : events.slice(0,2)).map((event) => {
       return (
         <Event
           event={event}
