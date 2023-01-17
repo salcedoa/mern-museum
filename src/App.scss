@@ -223,3 +223,16 @@ footer {
     &:hover {color: $highlight;}
   }
 }
+
+.collection-preview {
+  height: fit-content;
+  background-color: #040404;
+  text-align: center;
+  p {margin-top: 0;}
+  h1 {margin-bottom: 0;}
+  img {
+    max-width: 100%;
+    max-height: 34em;
+    opacity: 0.8;
+  }
+}

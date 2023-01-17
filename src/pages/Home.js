@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import EventList from '../components/EventList';
 import SupportPrompt from "../components/SupportPrompt";
+import CollectionPreview from "../components/CollectionPreview";
 
 const timeMap = new Map([
 	[1, "10:00 - 17:00"],
@@ -125,6 +126,7 @@ const Home = () => {
 				<OpenStatus />
 			</div>
 			<WhatsOn />
+			<CollectionPreview />
 			<SupportPrompt />
 		</>
 	);
