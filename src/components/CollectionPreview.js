@@ -5,10 +5,12 @@ const previewImage = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/
 export default function CollectionPreview() {
   return (
     <div className="collection-preview">
-      <img src={previewImage} alt="Carved stone depiction"/>
-      <h1>Our Collection</h1>
-      <p>Over 10 items</p>
-      <Link className="link-button" to="collection">Explore</Link>
+      <div className="laptop-center">
+        <img src={previewImage} alt="Carved stone depiction"/>
+        <h1>Our Collection</h1>
+        <p>Over 10 items</p>
+        <Link className="link-button" to="collection">Explore</Link>
+      </div>
     </div>
   );
 }

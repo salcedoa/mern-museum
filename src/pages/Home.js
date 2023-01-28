@@ -37,18 +37,18 @@ if (day === 1 && inOpeningRange(10,17)) {
 
 const Welcome = () => {
 	return (
-		<div className="text-block">
+		<div id="welcome-top" className="laptop-center text-block">
 			<h1>Museum of Human History</h1>
-			<p>
+			<h3>
 				Visit our vast collection of relics from all over the globe. Carefully curated exhibitions on themes throughout history are open to the public.
-			</p>
+			</h3>
 		</div>
 		)
 }
 
 const OpeningTimes = () => {
 	return (
-		<div id="timetable">
+		<div className="timetable">
 		<h2>Opening Times</h2>
 		<table>
 			<tbody>
@@ -88,7 +88,8 @@ const OpeningTimes = () => {
 
 const OpenStatus = () => {
 	return (
-			<div id="status" className="text-block">
+		<div id="status" className="laptop-center text-block">
+			<div className="status-wrapper">
 				{
 					open ? 
 					<>
@@ -104,14 +105,18 @@ const OpenStatus = () => {
 				}
 				<Link className="link-button" to="book">Book Tickets</Link>
 			</div>
+			<OpeningTimes />
+		</div>
 	);
 }
 
 const WhatsOn = () => {
 	return (
-		<div id="events-section">
+		<div id="events-section" className="laptop-center">
 			<h1>Events and Exhibitions</h1>
-			<EventList full={false} />
+			<div className="eventList">
+				<EventList full={false} />
+			</div>
 			<Link className="link-button" to="events" style={{align: 'center'}}>See more</Link>
 		</div>
 	);

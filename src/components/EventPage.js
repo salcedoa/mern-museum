@@ -28,7 +28,7 @@ export default function EventPage() {
   }, [params.id]);
 
   return (
-    <div className="event-page">
+    <div className="event-page laptop-center">
       <h1>{content.title}</h1>
       <img src={content.img_url} alt="event thumbnail" className="eventThumbnail" />
       <h2>{content.preview}</h2>

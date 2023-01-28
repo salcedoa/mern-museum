@@ -4,7 +4,9 @@ $highlight: rgb(204, 52, 191);
 $background: rgb(38, 38, 38);
 $text: rgb(212, 212, 212);
 
-* {box-sizing: border-box;}
+$bp-tablet: 453px;
+$bp-laptop: 1186px;
+$bp-desktop: 1200px;
 
 body {
   background-color: $background;
@@ -29,10 +31,6 @@ nav {
   padding: 0rem;
   height: 6rem;
 
-  #logo {
-    height: 100%;
-  }
-
   ul {
     list-style: none;
     display: none;
@@ -41,6 +39,23 @@ nav {
   li {
     display: inline-block;
     padding: 0 1rem;
+  }
+}
+
+.nav-content-wrapper {
+  height: 100%;
+
+  #menu-icon {
+    float: right;
+    width: 2.2em;
+    vertical-align: middle;
+    position: absolute;
+    top: 1.6em;
+    right: 2em;
+  }
+
+  #logo {
+    height: 100%;
   }
 }
 
@@ -71,21 +86,13 @@ footer {
 }
 
 #general-info {
-
-  #timetable {
-    display: block;
-    padding: 0.3rem 0 1rem 1rem;
-    background-color: black;
-
-    table {
-      border-spacing: 1rem 0;
-    }
-  }
-
+  
   #status {
     vertical-align: top;
     border-bottom: dotted 10px $text;
     padding-bottom: 1rem;
+    display: flex;
+    justify-content: flex-start;
 
     h2 {
       margin: 0;
@@ -95,6 +102,11 @@ footer {
     p {
       margin: 0;
       text-align: left;
+    }
+
+    .timetable {
+      display: none;
+      white-space: nowrap;
     }
   }
 }
@@ -136,7 +148,7 @@ footer {
 }
 
 #events-section {
-  padding: 0 1.5em;
+  padding: 0 1.5em 2em;
 
   .link-button {
     display: block;
@@ -179,18 +191,23 @@ footer {
 }
 
 .support-prompt-wrapper {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.547),rgba(0, 0, 0, 0.5)), url("../src/assets/Burdur_Museum_3224.jpg");
-  background-repeat: no-repeat;
-  height: 30vh;
+  height: fit-content;
   text-align: center;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),url('../src/assets/British_Museum_Reading_Room_Panorama_Feb_2006_edit1.jpg');
+  display: flex;
+  justify-content: center;
   
   .support-prompt-text {
     padding: 1em;
+    max-width: 40em;
   }
 
   input {
     display: block;
-    width: 100%;
+    width: 96%;
     border-width: 5px;
     margin-bottom: 1em;
     border-color: #8b6e6e;
@@ -226,6 +243,7 @@ footer {
 
 .collection-preview {
   height: fit-content;
+  padding: 2em 0;
   background-color: #040404;
   text-align: center;
   p {margin-top: 0;}
@@ -234,5 +252,110 @@ footer {
     max-width: 100%;
     max-height: 34em;
     opacity: 0.8;
+  }
+}
+
+@media only screen and (min-width: $bp-tablet) {
+  .menu-links {
+    position: relative;
+    float: right;
+    top: 3em;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: 20px;
+  }
+  
+  #hero-home {
+    height: 58vh;
+    background-image: url('./assets/pexels-lina-kivaka-3989821.jpg');
+    background-size: auto;
+    background-position: center -30rem;
+  }
+
+  #welcome-top {
+    margin-bottom: 3em;
+  }
+
+  .timetable {
+    display: inline-block !important;
+    padding: 0 3em;
+  }
+
+  .eventList {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    column-gap: 1.2em;
+    
+    .eventBox {
+      max-height: 35em;
+      width: 100%;
+    }
+  }
+
+}
+
+@media only screen and (min-width: $bp-laptop) {
+  body {
+    font-size: 18px;
+    line-height: 33px;
+
+    h1 {font-size: 44px;}
+  }
+
+  .laptop-center {
+    max-width: 63%;
+    margin: auto;
+  }
+
+  .timetable { 
+    padding: 0 8em;
+    font-size: 20px;
+  }
+
+  .eventBox {
+    width: 24em;
+    margin-right: 2em;
+    display: inline-block;
+  }
+
+  #events-section {
+    .link-button {
+      width: 7em;
+      margin: auto;
+    }
+  }
+
+  nav {
+    height: 9rem;
+    ul {
+      display: block;
+      float: right;
+    }
+
+    #menu-icon {
+      display: none;
+    }
+  }
+
+  .support-prompt-text {
+    padding: 1em;
+    width: 30em;
+
+    input {
+      margin-bottom: 3em;
+    }
+  }
+
+  .support-prompt-wrapper {
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),url('../src/assets/British_Museum_Reading_Room_Panorama_Feb_2006_edit1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 40vh;
+    vertical-align: middle;
+    display: flex;
   }
 }
